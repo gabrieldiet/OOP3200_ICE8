@@ -55,6 +55,30 @@ public class Main
         }
         while(!isValidInput);
 
+        // Multidimensional array
+
+        System.out.println("Multidimensional Array Example");
+        int rows = 8;
+        int columns = 8;
+        float [][] board = new float [rows][columns];
+
+        for(int x = 0; x < rows; x++)
+        {
+            for(int y = 0; y < columns; y++)
+            {
+                board[x][y] = (float)(Math.random() * 100.0) + 1.0f;
+            }
+        }
+
+        System.out.println("Showing 10 random values");
+
+        for(int i = 0; i < 10; i++)
+        {
+            var randRows = (int)(Math.random() * rows);
+            var randColumns = (int)(Math.random() * columns);
+            System.out.print("For now: " + randRows + " column: " + randColumns + " ");
+            System.out.printf("The random number is: %.2f \n", board[randRows][randColumns]);
+        }
 
 
         //Output
